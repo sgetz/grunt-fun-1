@@ -1,0 +1,21 @@
+{
+  "name": "grunt-fun-1",
+  "version": "0.0.0",
+  "authors": [
+    "ssheftel <sam.sheftel@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/webapp/app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "lodash": "~2.4.1",
+    "angular": "~1.2.16"
+  }
+}
