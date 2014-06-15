@@ -17,6 +17,10 @@
     "bootstrap": "~3.1.1",
     "lodash": "~2.4.1",
     "angular": "~1.2.16",
-    "requirejs": "~2.1.14"
+    "requirejs": "~2.1.14",
+    "angular-deferred-bootstrap": "~0.0.5",
+    "require-cs": "~0.4.4",
+    "requirejs-glob": "~0.1.2",
+    "coffee-script": "~1.7.1"
   }
 }

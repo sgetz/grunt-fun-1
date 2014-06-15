@@ -24,6 +24,14 @@ module.exports = (grunt) ->
         base: '<%= app.webapp_root %>'
         livereload: true
         open: 'http://localhost:<%= app.static_server_port %>'
+        middleware: (connect, options) ->
+          console.log(options);
+          return [
+            require('requirejs-glob')(),
+            connect.static(options.base[0]),
+            connect.directory(options.base[0])
+          ]
+
       }
     }
   }
