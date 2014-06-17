@@ -1,0 +1,8 @@
+define(
+  [],
+  {
+    "name": "MyApp"
+    "navigation": []
+  }
+
+)

@@ -1,6 +1,7 @@
 module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   path = require 'path'
+  rewriteRequest = require('grunt-connect-rewrite/lib/utils').rewriteRequest
   ###App File Location Config###
   app = {
     build: 'build'
@@ -18,6 +19,17 @@ module.exports = (grunt) ->
 
   ###Connect Static File Server Config###
   connect = {
+    options: {
+      hostname: 'localhost',
+      protocol: 'http',
+      port: '<%= app.static_server_port %>'
+    }
+    rules: [
+      {
+        from: '/env',
+        to: '/Env.json'
+      }
+    ]
     dev: {
       options: {
         port: '<%= app.static_server_port %>'
@@ -27,12 +39,18 @@ module.exports = (grunt) ->
         middleware: (connect, options) ->
           console.log(options);
           return [
+            rewriteRequest,
             require('requirejs-glob')(),
             connect.static(options.base[0]),
             connect.directory(options.base[0])
           ]
 
       }
+    }
+  }
+  configureRewriteRules = {
+    options: {
+      rulesProvider: 'connect.rules'
     }
   }
 
@@ -75,6 +93,7 @@ module.exports = (grunt) ->
   grunt.initConfig {
     app,
     connect,
+    configureRewriteRules,
     requirejs,
     less,
     clean,
@@ -94,4 +113,4 @@ module.exports = (grunt) ->
 
 
   ###Set Default Grunt Tasks###
-  grunt.registerTask 'default', ['startup-dev', 'connect:dev', 'server',  'watch']
+  grunt.registerTask 'default', ['startup-dev', 'configureRewriteRules', 'connect:dev', 'server',  'watch']
