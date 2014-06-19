@@ -11,7 +11,8 @@ require.config({
         bootstrap: 'vendor/bootstrap/dist/js/bootstrap',
         angular: 'vendor/angular/angular',
         lodash: 'vendor/lodash/dist/lodash',
-        "angular-deferred-bootstrap": 'vendor/angular-deferred-bootstrap/angular-deferred-bootstrap'
+        "angular-deferred-bootstrap": 'vendor/angular-deferred-bootstrap/angular-deferred-bootstrap',
+        "angular-ui-router": 'vendor/angular-ui-router/release/angular-ui-router'
     },
     shim: {
         cs: {
@@ -30,6 +31,9 @@ require.config({
         angular: {
             deps: ['jquery'],
             exports: 'angular'
+        },
+        "angular-ui-router": {
+            deps: ['angular']
         },
         "angular-deferred-bootstrap": {
           deps: ['angular'],
