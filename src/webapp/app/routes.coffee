@@ -3,22 +3,20 @@ define(
     'app',
     'Config',
     'angular-ui-router',
+    #  Routes  #
+    'cs!states/home/home-route',
+    'cs!states/other/other-route',
+
   ],
-  (app) ->
+  (app, Config, angularUiRouter, routes...) ->
     app.config ($stateProvider, $urlRouterProvider) ->
-      homeState = {
-        name: 'home'
-        url: '/home',
-        templateUrl: 'app/states/home/home.html'
-      }
 
 
 
       ###
         Add states to the state provider
       ###
-      states = [homeState]
-      for state in states
+      for state in routes
         $stateProvider.state state
 
 
