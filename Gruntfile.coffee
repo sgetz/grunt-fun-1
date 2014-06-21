@@ -17,6 +17,13 @@ module.exports = (grunt) ->
     css_dev_dir: '<%= app.app_dir %>/css'
   }
 
+  ###Env Config###
+  env = {
+    dev: {
+      src: 'dev_env.json'
+    }
+  }
+
   ###Connect Static File Server Config###
   connect = {
     options: {
@@ -92,6 +99,7 @@ module.exports = (grunt) ->
   ###Grunt Inishilize Config###
   grunt.initConfig {
     app,
+    env,
     connect,
     configureRewriteRules,
     requirejs,
@@ -109,7 +117,7 @@ module.exports = (grunt) ->
 
 
   ###Task run on grunt startup###
-  grunt.registerTask 'startup-dev', ['clean:development', 'less:development']
+  grunt.registerTask 'startup-dev', ['env:dev', 'clean:development', 'less:development']
 
 
   ###Set Default Grunt Tasks###

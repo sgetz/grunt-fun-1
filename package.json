@@ -18,7 +18,8 @@
     "grunt-contrib-less": "~0.11.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-connect": "~0.8.0",
-    "grunt-connect-rewrite": "~0.2.1"
+    "grunt-connect-rewrite": "~0.2.1",
+    "grunt-env": "~0.4.1"
   },
   "dependencies": {
     "cookie-parser": "~1.1.0",
@@ -27,6 +28,8 @@
     "method-override": "~2.0.2",
     "connect-logger": "0.0.1",
     "connect-cors": "~0.5.6",
-    "requirejs-glob": "~0.1.2"
+    "requirejs-glob": "~0.1.2",
+    "mongoose": "~3.8.12",
+    "mean-connect-mongo": "~0.4.3"
   }
 }
