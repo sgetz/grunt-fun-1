@@ -12,7 +12,6 @@ define(
       'cs!app-controller'
     ],
     function(Config, angular, _, deferredBootstrapper) {
-        //jquery.getJSON('http://localhost:8000/test', function( data ) {alert(data);});
       console.log('inside main.js');
       deferredBootstrapper.bootstrap({
         element: document,
