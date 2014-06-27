@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" type="text/css" href="app/css/main.css">
 </head>
-<body ng-controller="AppController as app">
+<body role="document" ng-controller="AppController as app">
 
+<!--Navbar-->
+<div class="navbar navbar-inverse " role="navigation" bs-navbar>
+  <div class="container">
+  <div class="navbar-header">
+    <a class="navbar-brand" ui-sref="home">Brand</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+    <li ui-sref-active="active"><a ui-sref="other">Other</a></li>
+  </ul>
+  </div>
+
+</div>
+<!--END Navbar-->
+<!--Main Content-->
+<div class="container" role="main">
+
+  <!--Each States View Inserted Here-->
   <div ui-view></div>
+  <!--END of States View-->
 
+</div>
+<!--End Main Content-->
   <script data-main="require-config" src="app/vendor/requirejs/require.js"></script>
 </body>
 </html>

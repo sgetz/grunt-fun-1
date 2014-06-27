@@ -9,7 +9,13 @@ define(
     @inject '$scope'
     initialize: ->
       @$scope.name = 'OtherController'
-    someMethod: (name) ->
-      "hello #{name}"
+      @$scope.button = {
+        "checkbox": {
+          "left": false,
+          "middle": false,
+          "right": false
+        }
+      }
+
 
 )

@@ -22,6 +22,8 @@
     "require-cs": "~0.4.4",
     "requirejs-glob": "~0.1.2",
     "coffee-script": "~1.7.1",
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "angular-strap": "~2.0.0",
+    "angular-motion": "~0.3.3"
   }
 }
