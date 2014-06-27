@@ -1,6 +1,6 @@
 define(
   [
-    'cs!app',
+    'cs!app'
     'cs!base-controller'
   ],
 (app, BaseController) ->
