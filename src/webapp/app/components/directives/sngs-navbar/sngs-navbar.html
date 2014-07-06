@@ -1,0 +1,14 @@
+<div class="sngs-navbar">
+  <!-- Place all tags inside this parent tag. DIRECTIVE TEMPLATES CAN HAVE ONLY ONE ROOT ELEMENT! -->
+  <div class="navbar navbar-inverse " role="navigation" bs-navbar>
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="{{branding.state}}">{{branding.text}}</a>
+      </div>
+      <ul class="nav navbar-nav" ng-repeat="nav in navigation">
+        <li ui-sref-active="active"><a ui-sref="{{nav.state}}">{{nav.text}}</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

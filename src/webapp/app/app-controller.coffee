@@ -4,6 +4,7 @@ define(
     'app'
     'angular-ui-router'
     'cs!base-controller'
+    'cs!components/directives/index'
   ],
   (angular, app, angularUiRouter, BaseController) ->
     class AppController extends BaseController

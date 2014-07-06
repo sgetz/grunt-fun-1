@@ -1,7 +1,7 @@
 define(
   [
     'angular',
-    'Config',
+    'cs!Config',
     'angular-ui-router',
     'ng-animate',
     'mgcrea-ngStrap',
